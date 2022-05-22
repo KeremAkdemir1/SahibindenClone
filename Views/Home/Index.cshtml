@@ -1,0 +1,17 @@
+﻿@model List<Sahibinden.Entities.Car>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+@foreach (var x in Model)
+{
+    <li>
+    <a href="/home/cardetails/@x.ID" title="@x.Name">
+        <img alt="@x.Name" src="@x.Photo" srcset="@x.Photo 1x, @x.Photo 2x">
+        <span>@x.Name</span>
+    </a>
+</li>
+}
+
+
